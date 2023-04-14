@@ -1,145 +1,145 @@
-# Auto-GPT: An Autonomous GPT-4 Experiment
+# Auto-GPT: 一个自主 GPT-4 实验
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/Torantulino/auto-gpt?style=social)
 [![Twitter Follow](https://img.shields.io/twitter/follow/siggravitas?style=social)](https://twitter.com/SigGravitas)
 [![Discord Follow](https://dcbadge.vercel.app/api/server/autogpt?style=flat)](https://discord.gg/autogpt)
 [![Unit Tests](https://github.com/Torantulino/Auto-GPT/actions/workflows/ci.yml/badge.svg)](https://github.com/Torantulino/Auto-GPT/actions/workflows/ci.yml)
 
-Auto-GPT is an experimental open-source application showcasing the capabilities of the GPT-4 language model. This program, driven by GPT-4, chains together LLM "thoughts", to autonomously achieve whatever goal you set. As one of the first examples of GPT-4 running fully autonomously, Auto-GPT pushes the boundaries of what is possible with AI.
+Auto-GPT 是一个实验性的开源应用程序，展示了 GPT-4 语言模型的能力。这个程序由 GPT-4 驱动，将 LLM“思想”链接在一起，自主地实现你设定的任何目标。作为 GPT-4 完全自主运行的首个例子之一，Auto-GPT 推动了 AI 的可行性边界。
 
-### Demo (30/03/2023):
+### 演示（2023 年 03 月 30 日）:
 
 https://user-images.githubusercontent.com/22963551/228855501-2f5777cf-755b-4407-a643-c7299e5b6419.mp4
 
-<h2 align="center"> 💖 Help Fund Auto-GPT's Development 💖</h2>
+<h2 align="center"> 💖 支持资助 Auto-GPT 的开发 💖</h2>
 <p align="center">
-If you can spare a coffee, you can help to cover the API costs of developing Auto-GPT and help push the boundaries of fully autonomous AI!
-A full day of development can easily cost as much as $20 in API costs, which for a free project is quite limiting.
-Your support is greatly appreciated
+如果您愿意捐赠咖啡，您可以帮助支付开发 Auto-GPT 的 API 成本，推动完全自主的 AI 边界！
+一整天的开发成本可以轻松达到 20 美元，这对于一个免费项目而言相当有限制性。
+您的支持将不胜感激。
 </p>
 
 <p align="center">
- Development of this free, open-source project is made possible by all the <a href="https://github.com/Torantulino/Auto-GPT/graphs/contributors">contributors</a> and <a href="https://github.com/sponsors/Torantulino">sponsors</a>. If you'd like to sponsor this project and have your avatar or company logo appear below <a href="https://github.com/sponsors/Torantulino">click here</a>.
+<a href="https://github.com/Torantulino/Auto-GPT/graphs/contributors">贡献者</a>和<a href="https://github.com/sponsors/Torantulino">赞助商</a>使这个免费、开源项目的开发成为可能。如果您想赞助这个项目，并让您的头像或公司标志出现在下面<a href="https://github.com/sponsors/Torantulino">请点击此处</a>。
 
-<h3 align="center">Individual Sponsors</h3>
+<h3 align="center">个人赞助商</h3>
 <p align="center">
 <a href="https://github.com/robinicus"><img src="https://github.com/robinicus.png" width="50px" alt="robinicus" /></a>&nbsp;&nbsp;<a href="https://github.com/prompthero"><img src="https://github.com/prompthero.png" width="50px" alt="prompthero" /></a>&nbsp;&nbsp;<a href="https://github.com/crizzler"><img src="https://github.com/crizzler.png" width="50px" alt="crizzler" /></a>&nbsp;&nbsp;<a href="https://github.com/tob-le-rone"><img src="https://github.com/tob-le-rone.png" width="50px" alt="tob-le-rone" /></a>&nbsp;&nbsp;<a href="https://github.com/FSTatSBS"><img src="https://github.com/FSTatSBS.png" width="50px" alt="FSTatSBS" /></a>&nbsp;&nbsp;<a href="https://github.com/toverly1"><img src="https://github.com/toverly1.png" width="50px" alt="toverly1" /></a>&nbsp;&nbsp;<a href="https://github.com/ddtarazona"><img src="https://github.com/ddtarazona.png" width="50px" alt="ddtarazona" /></a>&nbsp;&nbsp;<a href="https://github.com/Nalhos"><img src="https://github.com/Nalhos.png" width="50px" alt="Nalhos" /></a>&nbsp;&nbsp;<a href="https://github.com/Kazamario"><img src="https://github.com/Kazamario.png" width="50px" alt="Kazamario" /></a>&nbsp;&nbsp;<a href="https://github.com/pingbotan"><img src="https://github.com/pingbotan.png" width="50px" alt="pingbotan" /></a>&nbsp;&nbsp;<a href="https://github.com/indoor47"><img src="https://github.com/indoor47.png" width="50px" alt="indoor47" /></a>&nbsp;&nbsp;<a href="https://github.com/AuroraHolding"><img src="https://github.com/AuroraHolding.png" width="50px" alt="AuroraHolding" /></a>&nbsp;&nbsp;<a href="https://github.com/kreativai"><img src="https://github.com/kreativai.png" width="50px" alt="kreativai" /></a>&nbsp;&nbsp;<a href="https://github.com/hunteraraujo"><img src="https://github.com/hunteraraujo.png" width="50px" alt="hunteraraujo" /></a>&nbsp;&nbsp;<a href="https://github.com/Explorergt92"><img src="https://github.com/Explorergt92.png" width="50px" alt="Explorergt92" /></a>&nbsp;&nbsp;<a href="https://github.com/judegomila"><img src="https://github.com/judegomila.png" width="50px" alt="judegomila" /></a>&nbsp;&nbsp;
 <a href="https://github.com/thepok"><img src="https://github.com/thepok.png" width="50px" alt="thepok" /></a>
 &nbsp;&nbsp;<a href="https://github.com/SpacingLily"><img src="https://github.com/SpacingLily.png" width="50px" alt="SpacingLily" /></a>&nbsp;&nbsp;<a href="https://github.com/merwanehamadi"><img src="https://github.com/merwanehamadi.png" width="50px" alt="merwanehamadi" /></a>&nbsp;&nbsp;<a href="https://github.com/m"><img src="https://github.com/m.png" width="50px" alt="m" /></a>&nbsp;&nbsp;<a href="https://github.com/zkonduit"><img src="https://github.com/zkonduit.png" width="50px" alt="zkonduit" /></a>&nbsp;&nbsp;<a href="https://github.com/maxxflyer"><img src="https://github.com/maxxflyer.png" width="50px" alt="maxxflyer" /></a>&nbsp;&nbsp;<a href="https://github.com/tekelsey"><img src="https://github.com/tekelsey.png" width="50px" alt="tekelsey" /></a>&nbsp;&nbsp;<a href="https://github.com/digisomni"><img src="https://github.com/digisomni.png" width="50px" alt="digisomni" /></a>&nbsp;&nbsp;<a href="https://github.com/nocodeclarity"><img src="https://github.com/nocodeclarity.png" width="50px" alt="nocodeclarity" /></a>&nbsp;&nbsp;<a href="https://github.com/tjarmain"><img src="https://github.com/tjarmain.png" width="50px" alt="tjarmain" /></a>
 </p>
 
-## Table of Contents
+## 目录
 
-- [Auto-GPT: An Autonomous GPT-4 Experiment](#auto-gpt-an-autonomous-gpt-4-experiment)
-  - [Demo (30/03/2023):](#demo-30032023)
-  - [Table of Contents](#table-of-contents)
-  - [🚀 Features](#-features)
-  - [📋 Requirements](#-requirements)
-  - [💾 Installation](#-installation)
-  - [🔧 Usage](#-usage)
-    - [Logs](#logs)
-  - [🗣️ Speech Mode](#️-speech-mode)
-  - [🔍 Google API Keys Configuration](#-google-api-keys-configuration)
-    - [Setting up environment variables](#setting-up-environment-variables)
-  - [Redis Setup](#redis-setup)
-  - [🌲 Pinecone API Key Setup](#-pinecone-api-key-setup)
-    - [Setting up environment variables](#setting-up-environment-variables-1)
-  - [Setting Your Cache Type](#setting-your-cache-type)
-  - [View Memory Usage](#view-memory-usage)
-  - [💀 Continuous Mode ⚠️](#-continuous-mode-️)
-  - [GPT3.5 ONLY Mode](#gpt35-only-mode)
-  - [🖼 Image Generation](#-image-generation)
-  - [⚠️ Limitations](#️-limitations)
-  - [🛡 Disclaimer](#-disclaimer)
-  - [🐦 Connect with Us on Twitter](#-connect-with-us-on-twitter)
-  - [Run tests](#run-tests)
-  - [Run linter](#run-linter)
+- [Auto-GPT：一个自主的GPT-4实验](#auto-gpt-an-autonomous-gpt-4-experiment)
+  - [演示（2023年3月30日）：](#demo-30032023)
+  - [目录](#table-of-contents)
+  - [🚀 特点](#-features)
+  - [📋 要求](#-requirements)
+  - [💾 安装](#-installation)
+  - [🔧 用法](#-usage)
+    - [日志](#logs)
+  - [🗣️ 语音模式](#️-speech-mode)
+  - [🔍 Google API密钥配置](#-google-api-keys-configuration)
+    - [设置环境变量](#setting-up-environment-variables)
+  - [Redis设置](#redis-setup)
+  - [🌲 Pinecone API密钥设置](#-pinecone-api-key-setup)
+    - [设置环境变量](#setting-up-environment-variables-1)
+  - [设置缓存类型](#setting-your-cache-type)
+  - [查看内存使用情况](#view-memory-usage)
+  - [💀 持续模式 ⚠️](#-continuous-mode-️)
+  - [仅支持GPT3.5模式](#gpt35-only-mode)
+  - [🖼 图像生成](#-image-generation)
+  - [⚠️ 限制](#️-limitations)
+  - [🛡 免责声明](#-disclaimer)
+  - [🐦 在Twitter上与我们联系](#-connect-with-us-on-twitter)
+  - [运行测试](#run-tests)
+  - [运行lint程序](#run-linter)
 
-## 🚀 Features
+## 🚀 特点
 
-- 🌐 Internet access for searches and information gathering
-- 💾 Long-Term and Short-Term memory management
-- 🧠 GPT-4 instances for text generation
-- 🔗 Access to popular websites and platforms
-- 🗃️ File storage and summarization with GPT-3.5
+- 🌐 可以访问互联网以进行搜索和信息收集
+- 💾 长期和短期记忆管理
+- 🧠 GPT-4实例用于文本生成
+- 🔗 访问流行的网站和平台
+- 🗃️ 带有GPT-3.5的文件存储和摘要
 
-## 📋 Requirements
+## 📋 要求
 
-- environments(just choose one)
-  - [vscode + devcontainer](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers): It has been configured in the .devcontainer folder and can be used directly
-  - [Python 3.8 or later](https://www.tutorialspoint.com/how-to-install-python-in-windows)
-- [OpenAI API key](https://platform.openai.com/account/api-keys)
-- [PINECONE API key](https://www.pinecone.io/)
+- 环境（只需选择一个）
+  - [vscode + devcontainer](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)：它已在.devcontainer文件夹中进行了配置，可以直接使用
+  - [Python 3.8或更高版本](https://www.tutorialspoint.com/how-to-install-python-in-windows)
+- [OpenAI API密钥](https://platform.openai.com/account/api-keys)
+- [PINECONE API密钥](https://www.pinecone.io/)
 
-Optional:
+可选：
 
-- [ElevenLabs Key](https://elevenlabs.io/) (If you want the AI to speak)
+- [ElevenLabs密钥](https://elevenlabs.io/) （如果希望AI能够说话）
 
-## 💾 Installation
+## 💾 安装
 
-To install Auto-GPT, follow these steps:
+要安装Auto-GPT，请按照以下步骤操作：
 
-1. Make sure you have all the **requirements** above, if not, install/get them.
+1. 确保您具有上面列出的所有**要求**，如果没有，请安装/获取它们。
 
-_The following commands should be executed in a CMD, Bash or Powershell window. To do this, go to a folder on your computer, click in the folder path at the top and type CMD, then press enter._
+_以下命令应在CMD、Bash或Powershell窗口中执行。为此，转到计算机上的文件夹，在文件夹路径上单击，然后键入CMD，然后按Enter键。_
 
-2. Clone the repository:
-   For this step you need Git installed, but you can just download the zip file instead by clicking the button at the top of this page ☝️
+2. 克隆存储库：
+   对于此步骤，您需要已安装Git，但是您可以通过单击此页面顶部的按钮下载zip文件而不是安装Git☝️
 
 ```
 git clone https://github.com/Torantulino/Auto-GPT.git
 ```
 
-3. Navigate to the project directory:
-   _(Type this into your CMD window, you're aiming to navigate the CMD window to the repository you just downloaded)_
+3. 导航到项目目录：
+   （在CMD窗口中键入此内容，您的目标是导航CMD窗口到刚刚下载的存储库）
 
 ```
 cd 'Auto-GPT'
 ```
 
-4. Install the required dependencies:
-   _(Again, type this into your CMD window)_
+4. 安装所需的依赖项：
+   （再次，在CMD窗口中键入此内容）
 
 ```
 pip install -r requirements.txt
 ```
 
-5. Rename `.env.template` to `.env` and fill in your `OPENAI_API_KEY`. If you plan to use Speech Mode, fill in your `ELEVEN_LABS_API_KEY` as well.
-  - Obtain your OpenAI API key from: https://platform.openai.com/account/api-keys.
-  - Obtain your ElevenLabs API key from: https://elevenlabs.io. You can view your xi-api-key using the "Profile" tab on the website.
-  - If you want to use GPT on an Azure instance, set `USE_AZURE` to `True` and then:
-    - Rename `azure.yaml.template` to `azure.yaml` and provide the relevant `azure_api_base`, `azure_api_version` and all of the deployment ids for the relevant models in the `azure_model_map` section:
-      - `fast_llm_model_deployment_id` - your gpt-3.5-turbo or gpt-4 deployment id
-      - `smart_llm_model_deployment_id` - your gpt-4 deployment id
-      - `embedding_model_deployment_id` - your text-embedding-ada-002 v2 deployment id
-    - Please specify all of these values as double quoted strings
-    - details can be found here: https://pypi.org/project/openai/ in the `Microsoft Azure Endpoints` section and here: https://learn.microsoft.com/en-us/azure/cognitive-services/openai/tutorials/embeddings?tabs=command-line for the embedding model.
+5. 将`.env.template`重命名为`.env`，并填写您的`OPENAI_API_KEY`。如果您计划使用语音模式，请填写您的`ELEVEN_LABS_API_KEY`。
+  - 从此处获取您的OpenAI API密钥：https://platform.openai.com/account/api-keys。
+  - 从这里获取您的ElevenLabs API密钥：https://elevenlabs.io。您可以使用网站上的“个人资料”选项卡查看您的xi-api-key。
+  - 如果要在Azure实例上使用GPT，请将`USE_AZURE`设置为`True`，然后：
+    - 将`azure.yaml.template`重命名为`azure.yaml`，并在`azure_model_map`部分提供相关模型的`azure_api_base`、`azure_api_version`和所有部署ID：
+      - `fast_llm_model_deployment_id`-您的gpt-3.5-turbo或gpt-4部署ID
+      - `smart_llm_model_deployment_id`-您的gpt-4部署ID
+      - `embedding_model_deployment_id`-您的文本嵌入ada-002 v2部署ID
+    - 请将所有这些值指定为双引号字符串
+    - 详细信息可以在此处找到：https://pypi.org/project/openai/中的“Microsoft Azure Endpoints”部分，以及此处：https://learn.microsoft.com/en-us/azure/cognitive-services/openai/tutorials/embeddings?tabs=command-line有关嵌入模型的信息。
 
-## 🔧 Usage
+## 🔧 用法
 
-1. Run the `main.py` Python script in your terminal:
-   _(Type this into your CMD window)_
+1. 在终端中运行`main.py` Python脚本：
+   （在CMD窗口中键入此内容）
 
 ```
 python scripts/main.py
 ```
 
-2. After each of AUTO-GPT's actions, type "NEXT COMMAND" to authorise them to continue.
-3. To exit the program, type "exit" and press Enter.
+2. 在AUTO-GPT的每个操作之后，键入“NEXT COMMAND”以授权它们继续进行。
+3. 要退出程序，请键入“exit”，然后按Enter键。
 
-### Logs
+### 日志
 
-You will find activity and error logs in the folder `./output/logs`
+您将在文件夹`./output/logs`中找到活动和错误日志。
 
-To output debug logs:
+要输出调试日志：
 
 ```
 python scripts/main.py --debug
 ```
 
-## 🗣️ Speech Mode
+## 🗣️ 语音模式
 
-Use this to use TTS for Auto-GPT
+使用此选项在Auto-GPT中使用TTS
 
 ```
 python scripts/main.py --speak

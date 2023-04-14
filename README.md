@@ -145,26 +145,25 @@ python scripts/main.py --debug
 python scripts/main.py --speak
 ```
 
-## 🔍 Google API Keys Configuration
+## 🔍 谷歌 API Key 配置
 
-This section is optional, use the official google api if you are having issues with error 429 when running a google search.
-To use the `google_official_search` command, you need to set up your Google API keys in your environment variables.
+此部分是可选的，如果使用谷歌搜索时遇到错误 429，可以使用官方谷歌 API。要使用 `google_official_search` 命令，您需要在环境变量中设置您的谷歌 API 密钥。
 
-1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
-2. If you don't already have an account, create one and log in.
-3. Create a new project by clicking on the "Select a Project" dropdown at the top of the page and clicking "New Project". Give it a name and click "Create".
-4. Go to the [APIs & Services Dashboard](https://console.cloud.google.com/apis/dashboard) and click "Enable APIs and Services". Search for "Custom Search API" and click on it, then click "Enable".
-5. Go to the [Credentials](https://console.cloud.google.com/apis/credentials) page and click "Create Credentials". Choose "API Key".
-6. Copy the API key and set it as an environment variable named `GOOGLE_API_KEY` on your machine. See setting up environment variables below.
-7. Go to the [Custom Search Engine](https://cse.google.com/cse/all) page and click "Add".
-8. Set up your search engine by following the prompts. You can choose to search the entire web or specific sites.
-9. Once you've created your search engine, click on "Control Panel" and then "Basics". Copy the "Search engine ID" and set it as an environment variable named `CUSTOM_SEARCH_ENGINE_ID` on your machine. See setting up environment variables below.
+1. 前往[Google Cloud 控制台](https://console.cloud.google.com/)。
+2. 如果您还没有帐号，请注册并登录。
+3. 点击页面顶部的“选择项目”下拉菜单并点击“新建项目”来创建一个新项目。输入名称并点击“创建”。
+4. 进入[API 和服务仪表板](https://console.cloud.google.com/apis/dashboard)，点击“启用 API 和服务”。搜索“Custom Search API”，点击并启用它。
+5. 前往[凭据](https://console.cloud.google.com/apis/credentials)页面，点击“创建凭据”。选择“API 密钥”。
+6. 复制 API 密钥并将其设置为一个环境变量，命名为`GOOGLE_API_KEY`。请参见下面的环境变量设置。
+7. 前往[自定义搜索引擎](https://cse.google.com/cse/all)页面，点击“添加”。
+8. 按照提示设置您的搜索引擎。您可以选择搜索整个 web 或特定网站。
+9. 创建搜索引擎后，点击“控制面板”，然后点击“基础知识”。复制“搜索引擎 ID”，并将其设置为一个环境变量，命名为`CUSTOM_SEARCH_ENGINE_ID`。请参见下面的环境变量设置。
 
-_Remember that your free daily custom search quota allows only up to 100 searches. To increase this limit, you need to assign a billing account to the project to profit from up to 10K daily searches._
+_请记住，您的免费每日自定义搜索配额只允许最多 100 次搜索。要增加此限制，您需要为您的项目分配一个结算账户，以便从每天高达 10K 次搜索中获利。_
 
-### Setting up environment variables
+### 环境变量设置
 
-For Windows Users:
+对于 Windows 用户：
 
 ```
 setx GOOGLE_API_KEY "YOUR_GOOGLE_API_KEY"
@@ -172,7 +171,7 @@ setx CUSTOM_SEARCH_ENGINE_ID "YOUR_CUSTOM_SEARCH_ENGINE_ID"
 
 ```
 
-For macOS and Linux users:
+对于 macOS 和 Linux 用户：
 
 ```
 export GOOGLE_API_KEY="YOUR_GOOGLE_API_KEY"
@@ -180,19 +179,19 @@ export CUSTOM_SEARCH_ENGINE_ID="YOUR_CUSTOM_SEARCH_ENGINE_ID"
 
 ```
 
-## Redis Setup
+## Redis 配置
 
-Install docker desktop.
+安装 Docker Desktop。
 
-Run:
+运行：
 
 ```
 docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server:latest
 ```
 
-See https://hub.docker.com/r/redis/redis-stack-server for setting a password and additional configuration.
+有关设置密码和其他配置，请参见https://hub.docker.com/r/redis/redis-stack-server。
 
-Set the following environment variables:
+设置以下环境变量：
 
 ```
 MEMORY_BACKEND=redis
@@ -201,37 +200,37 @@ REDIS_PORT=6379
 REDIS_PASSWORD=
 ```
 
-Note that this is not intended to be run facing the internet and is not secure, do not expose redis to the internet without a password or at all really.
+注意，此程序不适用于面向网络并且不安全。请勿在没有密码或完全不安全的情况下公开 redis。
 
-You can optionally set
+您可以选择性地设置
 
 ```
 WIPE_REDIS_ON_START=False
 ```
 
-To persist memory stored in Redis.
+以保留在 Redis 中存储的内存。
 
-You can specify the memory index for redis using the following:
+您可以使用以下语法指定 redis 的内存索引：
 
 ```
 MEMORY_INDEX=whatever
 ```
 
-## 🌲 Pinecone API Key Setup
+## 🌲 Pinecone API Key 设置
 
-Pinecone enables the storage of vast amounts of vector-based memory, allowing for only relevant memories to be loaded for the agent at any given time.
+Pinecone 可以存储巨量基于向量的内存，允许在任何给定时间点仅加载与代理相关的记忆。
 
-1. Go to [pinecone](https://app.pinecone.io/) and make an account if you don't already have one.
-2. Choose the `Starter` plan to avoid being charged.
-3. Find your API key and region under the default project in the left sidebar.
+1. 前往[pinecone](https://app.pinecone.io/)，如果没有帐号，请创建一个新帐号。
+2. 选择“入门”计划以避免收费。
+3. 在左侧菜单栏中的默认项目下查找您的 API 密钥和区域。
 
-### Setting up environment variables
+### 环境变量设置
 
-Simply set them in the `.env` file.
+只需在`.env`文件中设置。
 
-Alternatively, you can set them from the command line (advanced):
+或者，您也可以从命令行设置（高级）：
 
-For Windows Users:
+对于 Windows 用户：
 
 ```
 setx PINECONE_API_KEY "YOUR_PINECONE_API_KEY"
@@ -239,7 +238,7 @@ setx PINECONE_ENV "Your pinecone region" # something like: us-east4-gcp
 
 ```
 
-For macOS and Linux users:
+对于 macOS 和 Linux 用户：
 
 ```
 export PINECONE_API_KEY="YOUR_PINECONE_API_KEY"
@@ -247,86 +246,87 @@ export PINECONE_ENV="Your pinecone region" # something like: us-east4-gcp
 
 ```
 
-## Setting Your Cache Type
+## 设置缓存类型
 
-By default Auto-GPT is going to use LocalCache instead of redis or Pinecone.
+默认情况下，Auto-GPT 将使用 LocalCache 而不是 redis 或 Pinecone。
 
-To switch to either, change the `MEMORY_BACKEND` env variable to the value that you want:
+要切换到其中一个，请将`MEMORY_BACKEND` env 变量更改为您想要的值：
 
-`local` (default) uses a local JSON cache file
-`pinecone` uses the Pinecone.io account you configured in your ENV settings
-`redis` will use the redis cache that you configured
+`local`（默认值）使用本地 JSON 缓存文件
+`pinecone` 使用您在 ENV 设置中配置的 Pinecone.io 帐户
+`redis` 将使用您配置的 redis 缓存
 
-## View Memory Usage
+## 查看内存使用情况
 
-1. View memory usage by using the `--debug` flag :)
+1. 使用`--debug`标志查看内存使用情况 :)
 
-## 💀 Continuous Mode ⚠️
+## 💀 连续模式 ⚠️
 
-Run the AI **without** user authorisation, 100% automated.
-Continuous mode is not recommended.
-It is potentially dangerous and may cause your AI to run forever or carry out actions you would not usually authorise.
-Use at your own risk.
+运行 AI **无需**用户授权，100% 自动化。
+不建议使用连续模式。
+它可能会导致您的 AI 永久运行或执行您通常不授权的操作，因此可能存在潜在的危险。
+自行决定是否使用。
 
-1. Run the `main.py` Python script in your terminal:
+1. 在终端中运行 `main.py` Python 脚本：
 
 ```
 python scripts/main.py --continuous
 
 ```
 
-2. To exit the program, press Ctrl + C
+2. 要退出程序，请按 Ctrl + C
 
-## GPT3.5 ONLY Mode
+## 仅限使用 GPT3.5 模式
 
-If you don't have access to the GPT4 api, this mode will allow you to use Auto-GPT!
+如果您没有访问 GPT4 api，此模式将允许您使用 Auto-GPT！
 
 ```
 python scripts/main.py --gpt3only
 ```
 
-It is recommended to use a virtual machine for tasks that require high security measures to prevent any potential harm to the main computer's system and data.
+建议使用虚拟机执行需要高安全措施的任务，以避免对主机计算机系统和数据造成任何潜在影响。
 
-## 🖼 Image Generation
+## 🖼 图像生成
 
-By default, Auto-GPT uses DALL-e for image generation. To use Stable Diffusion, a [HuggingFace API Token](https://huggingface.co/settings/tokens) is required.
+默认情况下，Auto-GPT 使用 DALL-e 进行图像生成。要使用 Stable Diffusion，需要[ HuggingFace API Token ](https://huggingface.co/settings/tokens)。
 
-Once you have a token, set these variables in your `.env`:
+在拥有令牌后，将这些变量设置在您的`.env`中：
 
 ```
 IMAGE_PROVIDER=sd
 HUGGINGFACE_API_TOKEN="YOUR_HUGGINGFACE_API_TOKEN"
 ```
 
-## ⚠️ Limitations
+## ⚠️ 限制
 
-This experiment aims to showcase the potential of GPT-4 but comes with some limitations:
+这个实验旨在展示 GPT-4 的潜力，但也有一些限制：
 
-1. Not a polished application or product, just an experiment
-2. May not perform well in complex, real-world business scenarios. In fact, if it actually does, please share your results!
-3. Quite expensive to run, so set and monitor your API key limits with OpenAI!
+1. 不是一个精制的应用程序或产品，只是一个实验
+2. 可能在复杂的实际业务场景中表现不佳。实际上，如果它真的这么做了，请分享您的成果！
+3. 运行成本相当高，因此请设置并监测 OpenAI API 键的限制！
 
-## 🛡 Disclaimer
+## 🛡 免责声明
 
-Disclaimer
-This project, Auto-GPT, is an experimental application and is provided "as-is" without any warranty, express or implied. By using this software, you agree to assume all risks associated with its use, including but not limited to data loss, system failure, or any other issues that may arise.
+免责声明
 
-The developers and contributors of this project do not accept any responsibility or liability for any losses, damages, or other consequences that may occur as a result of using this software. You are solely responsible for any decisions and actions taken based on the information provided by Auto-GPT.
+Auto-GPT 项目是一个实验性应用程序，以 "现状" 的方式提供，没有任何保证，明示或暗示的。使用此软件，您同意承担与其使用相关的所有风险，包括但不限于数据丢失、系统故障或可能出现的任何其他问题。
 
-**Please note that the use of the GPT-4 language model can be expensive due to its token usage.** By utilizing this project, you acknowledge that you are responsible for monitoring and managing your own token usage and the associated costs. It is highly recommended to check your OpenAI API usage regularly and set up any necessary limits or alerts to prevent unexpected charges.
+本项目的开发人员和贡献者不承担任何责任或责任，对使用此软件所可能导致的任何损失、损害或其他后果不承担任何责任。您凭借 Auto-GPT 提供的信息对任何决策和行动负有唯一责任。
 
-As an autonomous experiment, Auto-GPT may generate content or take actions that are not in line with real-world business practices or legal requirements. It is your responsibility to ensure that any actions or decisions made based on the output of this software comply with all applicable laws, regulations, and ethical standards. The developers and contributors of this project shall not be held responsible for any consequences arising from the use of this software.
+请注意，使用 GPT-4 语言模型可能由于其令牌使用而昂贵。通过使用本项目，您承认您负责监测和管理自己的令牌使用和相关费用。强烈建议定期检查您的 OpenAI API 使用情况，并设置任何必要的限制或预警，以防止未预料的费用。
 
-By using Auto-GPT, you agree to indemnify, defend, and hold harmless the developers, contributors, and any affiliated parties from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from your use of this software or your violation of these terms.
+作为一项自主的实验，Auto-GPT 可能会生成与现实世界业务惯例或法律要求不一致的内容或采取措施。您有责任确保基于此软件输出所做出的任何行动或决策符合所有适用的法律、法规和道德标准。本项目的开发人员和贡献者不承担因使用本软件而产生的任何后果的责任。
 
-## 🐦 Connect with Us on Twitter
+通过使用 Auto-GPT，您同意保护、维护和使免受任何和所有索赔、损害、损失、责任、成本和费用（包括合理律师费），这是由于您使用该软件或违反这些条款而产生的。
 
-Stay up-to-date with the latest news, updates, and insights about Auto-GPT by following our Twitter accounts. Engage with the developer and the AI's own account for interesting discussions, project updates, and more.
+## 🐦 在 Twitter 上与我们联系
 
-- **Developer**: Follow [@siggravitas](https://twitter.com/siggravitas) for insights into the development process, project updates, and related topics from the creator of Entrepreneur-GPT.
-- **Entrepreneur-GPT**: Join the conversation with the AI itself by following [@En_GPT](https://twitter.com/En_GPT). Share your experiences, discuss the AI's outputs, and engage with the growing community of users.
+通过关注我们的 Twitter 账号，了解 Auto-GPT 的最新新闻、更新和见解。与开发人员和 AI 的账号进行有趣的讨论、项目更新和更多内容。
 
-We look forward to connecting with you and hearing your thoughts, ideas, and experiences with Auto-GPT. Join us on Twitter and let's explore the future of AI together!
+- **开发人员**：关注 [@siggravitas](https://twitter.com/siggravitas) 获取有关开发过程、项目更新和 Entrepreneur-GPT 创作者相关主题的见解。
+- **Entrepreneur-GPT**：通过关注 [@En_GPT](https://twitter.com/En_GPT) 与 AI 自身进行交流。分享您的经验，讨论 AI 的输出，并参与不断壮大的用户社群。
+
+我们期待与您建立联系，听取您对 Auto-GPT 的想法、思路和经验。加入我们的 Twitter，让我们一起探索 AI 的未来！
 
 <p align="center">
   <a href="https://star-history.com/#Torantulino/auto-gpt&Date">
@@ -334,29 +334,29 @@ We look forward to connecting with you and hearing your thoughts, ideas, and exp
   </a>
 </p>
 
-## Run tests
+## 运行测试
 
-To run tests, run the following command:
+要运行测试，请运行以下命令：
 
 ```
 python -m unittest discover tests
 ```
 
-To run tests and see coverage, run the following command:
+要运行测试并查看覆盖率，请运行以下命令：
 
 ```
 coverage run -m unittest discover tests
 ```
 
-## Run linter
+## 运行检查器
 
-This project uses [flake8](https://flake8.pycqa.org/en/latest/) for linting. We currently use the following rules: `E303,W293,W291,W292,E305,E231,E302`. See the [flake8 rules](https://www.flake8rules.com/) for more information.
+此项目使用 [flake8](https://flake8.pycqa.org/en/latest/) 进行检查。我们目前使用以下规则：`E303,W293,W291,W292,E305,E231,E302`。有关更多信息，请参见 [flake8 规则](https://www.flake8rules.com/)。
 
-To run the linter, run the following command:
+要运行检查器，请运行以下命令：
 
 ```
 flake8 scripts/ tests/
 
-# Or, if you want to run flake8 with the same configuration as the CI:
+# 或者，如果您想以与 CI 相同的配置运行 flake8:
 flake8 scripts/ tests/ --select E303,W293,W291,W292,E305,E231,E302
 ```
